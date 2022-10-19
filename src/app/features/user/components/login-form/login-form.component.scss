@@ -1,0 +1,16 @@
+.card {
+    width: 300px;
+    
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+:host ::ng-deep .p-card-title {
+    text-align: center;
+}

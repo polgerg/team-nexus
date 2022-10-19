@@ -1,0 +1,9 @@
+<div class="card">
+    <p-card header="Login">
+        <form [formGroup]="form" class="form-container">
+            <app-custom-form-input [inputType]="'text'" [inputId]="'username'" [label]="'Username'" [control]="username"></app-custom-form-input>
+            <app-custom-form-input [inputType]="'password'" [inputId]="'password'" [label]="'Password'" [control]="password"></app-custom-form-input>
+            <app-primary-button [buttonLabel]="'Login'"></app-primary-button>
+        </form>
+    </p-card>
+</div>

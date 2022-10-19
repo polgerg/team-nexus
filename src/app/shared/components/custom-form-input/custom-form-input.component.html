@@ -1,0 +1,8 @@
+<span class="p-float-label">
+    <input [type]="inputType" [name]="inputId" [id]="inputId" [formControl]="control" pInputText [ngClass]="{'ng-invalid ng-dirty' : control.invalid && control.touched}"> 
+    <label [for]="inputId">{{label}}</label>
+</span>
+<ng-container *ngIf="control.invalid && control.touched">
+    <small *ngIf="control.hasError('required')" [id]="inputId" class="p-error block">This field is required</small>
+    <small *ngIf="control.hasError('pattern')" [id]="inputId" class="p-error block">This field is required</small>
+</ng-container>

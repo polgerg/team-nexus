@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
-import {MenuItem} from 'primeng/api'; 
-import {InputTextModule} from 'primeng/inputtext';
-import {CardModule} from 'primeng/card';
-import {ButtonModule} from 'primeng/button';
-
-
+import { AccordionModule } from 'primeng/accordion'; //accordion and accordion tab
+import { MenuItem } from 'primeng/api';
+import { InputTextModule } from 'primeng/inputtext';
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
+import { ToolbarModule } from 'primeng/toolbar';
 
 @NgModule({
   declarations: [],
@@ -14,13 +13,15 @@ import {ButtonModule} from 'primeng/button';
     AccordionModule,
     InputTextModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    ToolbarModule,
   ],
   exports: [
     AccordionModule,
     InputTextModule,
     CardModule,
-    ButtonModule
-  ]
+    ButtonModule,
+    ToolbarModule,
+  ],
 })
-export class PrimeModule { }
+export class PrimeModule {}

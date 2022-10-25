@@ -1,1 +1,8 @@
-<button pButton pRipple type="button" [label]="buttonLabel" class="p-button-raised"></button>
+<button
+  (click)="onClick()"
+  [type]="type"
+  [label]="buttonLabel"
+  pButton
+  pRipple
+  class="p-button-raised"
+></button>

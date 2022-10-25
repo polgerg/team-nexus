@@ -1,3 +1,6 @@
 <div>
-  <app-register-form [form]="registerForm"></app-register-form>
+  <app-register-form
+    (submitedForm)="onSubmit()"
+    [form]="registerForm"
+  ></app-register-form>
 </div>

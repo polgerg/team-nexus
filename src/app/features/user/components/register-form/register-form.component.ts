@@ -1,6 +1,6 @@
 import { IUserRegisterForm } from 'src/app/models/user-register-form.interface';
 import { FormGroup, FormControl } from '@angular/forms';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-register-form',
@@ -9,6 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class RegisterFormComponent implements OnInit {
   @Input() form!: FormGroup<IUserRegisterForm>;
+  @Output() submitedForm = new EventEmitter<void>();
   get firstName(): FormControl {
     return this.form.get('firstName') as FormControl;
   }
@@ -27,4 +28,13 @@ export class RegisterFormComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+  onSubmit() {
+    console.log(this.form);
+
+    if (this.form.valid) {
+      this.submitedForm.emit();
+    } else {
+      this.form.markAllAsTouched();
+    }
+  }
 }

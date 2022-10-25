@@ -5,5 +5,5 @@ export interface IUserRegisterForm {
   lastName: FormControl<string>;
   username: FormControl<string>;
   password: FormControl<string>;
-  zip: FormControl<number | undefined>;
+  zip: FormControl<string>;
 }

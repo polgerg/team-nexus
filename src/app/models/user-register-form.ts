@@ -1,8 +1,10 @@
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
+import { UsernameValidator } from './../util/customValidators/UsernameValidator';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { IUserRegisterForm } from './user-register-form.interface';
 
 export class UserRegisterForm extends FormGroup<IUserRegisterForm> {
-  constructor() {
+  constructor(authService: AuthService) {
     super({
       firstName: new FormControl('', {
         nonNullable: true,
@@ -16,11 +18,13 @@ export class UserRegisterForm extends FormGroup<IUserRegisterForm> {
         nonNullable: true,
         validators: [
           Validators.required,
+
           Validators.pattern(/^[a-z0-9]+$/),
           Validators.minLength(4),
         ],
+        asyncValidators: [UsernameValidator.createValidator(authService)],
       }),
-      zip: new FormControl(undefined, {
+      zip: new FormControl('', {
         nonNullable: true,
         validators: [
           Validators.required,

@@ -1,9 +1,28 @@
 <div class="card">
-    <p-card header="Login">
-        <form [formGroup]="form" class="form-container">
-            <app-custom-form-input [inputType]="'text'" [inputId]="'username'" [label]="'Username'" [control]="username"></app-custom-form-input>
-            <app-custom-form-input [inputType]="'password'" [inputId]="'password'" [label]="'Password'" [control]="password"></app-custom-form-input>
-            <app-primary-button [buttonLabel]="'Login'"></app-primary-button>
-        </form>
-    </p-card>
+  <p-card header="Login">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+      <app-custom-form-input
+        [inputType]="'text'"
+        [inputId]="'username'"
+        [label]="'Username'"
+        [control]="username"
+      ></app-custom-form-input>
+      <app-custom-form-input
+        [inputType]="'password'"
+        [inputId]="'password'"
+        [label]="'Password'"
+        [control]="password"
+      ></app-custom-form-input>
+
+      <app-primary-button
+        type="Submit"
+        [buttonLabel]="'Login'"
+      ></app-primary-button>
+    </form>
+    <div class="error-container">
+      <small *ngIf="form.hasError('invalidCredentials')" class="p-error block"
+        >Invalid username or password</small
+      >
+    </div>
+  </p-card>
 </div>

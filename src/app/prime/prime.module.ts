@@ -6,6 +6,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { ToolbarModule } from 'primeng/toolbar';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 @NgModule({
   declarations: [],
@@ -15,6 +16,7 @@ import { ToolbarModule } from 'primeng/toolbar';
     CardModule,
     ButtonModule,
     ToolbarModule,
+    ProgressSpinnerModule,
   ],
   exports: [
     AccordionModule,
@@ -22,6 +24,7 @@ import { ToolbarModule } from 'primeng/toolbar';
     CardModule,
     ButtonModule,
     ToolbarModule,
+    ProgressSpinnerModule,
   ],
 })
 export class PrimeModule {}

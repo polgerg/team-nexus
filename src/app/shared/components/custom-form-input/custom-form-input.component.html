@@ -11,17 +11,31 @@
     <label [for]="inputId">{{ label }}</label>
   </span>
   <ng-container *ngIf="control.invalid && control.touched">
-    <small
-      *ngIf="control.hasError('required')"
-      [id]="inputId"
-      class="p-error block"
-      >This field is required</small
-    >
-    <small
-      *ngIf="control.hasError('pattern')"
-      [id]="inputId"
-      class="p-error block"
-      >This field is required</small
-    >
+    <div>
+      <small *ngIf="control.hasError('required')" class="p-error block"
+        >This field is required</small
+      >
+    </div>
+    <div>
+      <small *ngIf="control.hasError('pattern')" class="p-error block"
+        >This field pattern is not suitable the correct pattern
+        {{ control.getError("pattern").requiredPattern }} would be</small
+      >
+    </div>
+    <div>
+      <small *ngIf="control.hasError('min')" class="p-error block"
+        >The minimum value of the field {{ control.getError("min").min }} would
+        be</small
+      >
+    </div>
+    <div>
+      <small *ngIf="control.hasError('max')" class="p-error block"
+        >The maximum value of the field {{ control.getError("max").max }} would
+        be</small
+      >
+      <small *ngIf="control.hasError('usernameExists')" class="p-error block"
+        >This username is already taken
+      </small>
+    </div>
   </ng-container>
 </div>

@@ -1,19 +1,153 @@
 {
-  "posts": [
+  "todos": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "title": "Executive Secretary",
+      "progress": "In progress",
+      "description": "Konklab",
+      "date": "2022-01-21",
+      "userId": 1,
+      "subTodoIds": []
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "title": "Developer III",
+      "progress": "Open",
+      "description": "Cookley",
+      "date": "2022-02-13",
+      "userId": 1,
+      "subTodoIds": [
+        4
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Clinical Specialist",
+      "progress": "Done",
+      "description": "Alpha",
+      "date": "2021-10-29",
+      "userId": 2,
+      "subTodoIds": [
+        3
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Human Resources Assistant I",
+      "progress": "In progress",
+      "description": "Cookley",
+      "date": "2022-07-12",
+      "userId": 2,
+      "subTodoIds": [
+        2
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Help Desk Technician",
+      "progress": "Done",
+      "description": "Stronghold",
+      "date": "2021-09-08",
+      "userId": 1,
+      "subTodoIds": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Software Engineer I",
+      "progress": "Done",
+      "description": "Tres-Zap",
+      "date": "2021-11-26",
+      "userId": 2,
+      "subTodoIds": []
+    },
+    {
+      "id": 7,
+      "title": "Staff Accountant IV",
+      "progress": "Done",
+      "description": "Prodder",
+      "date": "2022-06-01",
+      "userId": 1,
+      "subTodoIds": [
+        1
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Software Test Engineer III",
+      "progress": "In progress",
+      "description": "Keylex",
+      "date": "2021-06-01",
+      "userId": 1,
+      "subTodoIds": [
+        3
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Physical Therapy Assistant",
+      "progress": "Done",
+      "description": "Tresom",
+      "date": "2022-01-18",
+      "userId": 2,
+      "subTodoIds": [
+        2
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Accountant II",
+      "progress": "Open",
+      "description": "Toughjoyfax",
+      "date": "2021-11-29",
+      "userId": 1,
+      "subTodoIds": [
+        1
+      ]
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "users": [
+    {
+      "id": 2,
+      "firstName": "Ervin",
+      "lastName": "Howell",
+      "username": "homwell",
+      "zip": "1099",
+      "password": "123456",
+      "validated": true,
+      "created_at": "2021-06-01"
+    },
+    {
+      "firstName": "First",
+      "lastName": "Last",
+      "username": "username",
+      "zip": 1234,
+      "password": "password123.",
+      "validated": true,
+      "created_at": "1666706586143",
+      "id": 3
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "username": "username",
+      "zip": 1234,
+      "password": "password1234.",
+      "validated": false,
+      "created_at": "1666707239880",
+      "id": 4
+    },
+    {
+      "firstName": "asd",
+      "lastName": "dsa",
+      "username": "asddsa",
+      "zip": 1323,
+      "password": "dasdasd3123.",
+      "validated": false,
+      "created_at": "1666712450026",
+      "id": 5
+    }
+  ]
 }

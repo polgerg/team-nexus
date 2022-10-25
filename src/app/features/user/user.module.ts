@@ -5,6 +5,7 @@ import { SignupComponent } from './features/signup/signup.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
+import { ValidateComponent } from './features/validate/validate.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { RegisterFormComponent } from './components/register-form/register-form.
     LoginComponent,
     SignupComponent,
     LoginFormComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    ValidateComponent
   ],
   imports: [
     UserRoutingModule,

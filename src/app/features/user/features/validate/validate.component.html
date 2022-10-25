@@ -1,0 +1,10 @@
+<div class="validated-page">
+  <div *ngIf="handler$ | async; else elseBlock">
+    <div>
+      <p>Successfully Validated Your Account</p>
+    </div>
+  </div>
+  <ng-template #elseBlock>
+    <p-progressSpinner></p-progressSpinner>
+  </ng-template>
+</div>
